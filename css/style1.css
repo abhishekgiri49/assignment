@@ -1,0 +1,163 @@
+.bg-gray{
+    padding: 10px;
+    background-color: #f5f4f5;
+    padding: 20px;
+
+}
+
+.bg-white{
+    /* width: 100%;
+    padding: 10px;
+    background-color: #ffff; */
+}
+
+.buy-now{
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 8px;
+    height: 40px;
+    background-color: #ff905a;
+    font-weight: bolder;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    color: white;
+}
+
+.product-title{
+    font-weight: 800;
+}
+
+.product-price{
+    font-weight: 700;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+.text-warning{
+    color:orangered;
+}
+
+.m-2{
+    margin: 2px;
+}.mt-2{
+    margin-top: 2px;
+}
+.mt-3{
+    margin-top: 3px;
+}
+.m-auto{
+    margin: auto;
+}
+.p-2{
+    padding: 2px;
+}
+
+.text-center{
+    text-align: center;
+}
+.offer{
+    height:50%; padding: 10px; text-align: center; border: 1px solid #d3d3d3; border-shadow: 2px 3px  #d3d3d3
+}
+.hot-deal-card{
+    border: 5px solid #d3d3d3;
+    border-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hot-deal-image{
+    width: 50%;
+}
+.hot-deal-detail{
+    margin-top: 20px;
+    width: 50%;
+}
+
+.font-800{
+    font-weight: 800;
+}
+.font-800{
+    font-weight: 500;
+}
+
+.font-2xl{
+    font-size: xx-large;
+}
+.font-xl{
+    font-size: x-large;
+}
+.font-l{
+    font-size: large;
+}.font-sm{
+    font-size: small;
+}
+.wrapper {
+    width: 100%;
+}
+.tabs {
+    position: relative;
+    /*margin: 1rem 0;*/
+}
+.tabs::before,
+.tabs::after {
+    content: "";
+    display: table;
+}
+.tabs::after {
+    clear: both;
+}
+.tab {
+    float: left;
+}
+.tab-switch {
+    display: none;
+}
+.tab-label {
+    position: relative;
+    display: block;
+    line-height: 2.75em;
+    height: 3em;
+    padding: 0 1.618em;
+    background: #ff905a;
+    border-right: 0.125rem solid white;
+    color: white;
+    cursor: pointer;
+    top: 0;
+    transition: all 0.25s;
+}
+.tab-label:hover {
+    top: -0.25rem;
+    transition: top 0.25s;
+}
+.tab-content {
+    position: absolute;
+    z-index: 1;
+    top: 2.75em;
+    left: 0;
+    padding: 1.618rem;
+    background: #fff;
+    color: #2c3e50;
+    /*border-bottom: 0.25rem solid #bdc3c7;*/
+    opacity: 0;
+    transition: all 0.35s;
+}
+.tab-switch:checked + .tab-label {
+    background: #fff;
+    color: #2c3e50;
+    border-bottom: 0;
+    border-right: 0.125rem solid #fff;
+    transition: all 0.35s;
+    z-index: 1;
+    top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content {
+    z-index: 2;
+    opacity: 1;
+    transition: all 0.35s;
+}
+
+
+
