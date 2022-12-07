@@ -13,7 +13,7 @@
 <body>
 
 <?php include('./layouts/header.php'); ?>
-<div class="container">
+<div class="container index-body">
     <section class="banner">
     </section>
     <div class="row bg-gray">
@@ -44,22 +44,21 @@
             <?php include("layouts/product/product.php") ?>
         </div>
     </div>
-    <div class="row" style="margin: 10px;">
+    <div class="row offer-grid" style="margin: 10px;">
         <div class="col-md-3 " style="max-height: 200px">
             <span style="margin: 10px; font-weight: bold; font-size: x-large">OFFER</span>
             <div class=" offer" style="margin-top:10px ">
                 <div class="row">
                     <div class="col-md-5">
                         <p>
-                            <span style="font-weight: bolder; font-size: xx-large">30%</span>
+                            <span class="m-percent" style="font-weight: bolder; font-size: xx-large">30%</span>
                             <br>
-                            <span style="font-weight: lighter; font-size: large">
+                            <span class="m-span" style="font-weight: lighter; font-size: large">
                         off on all
                     </span>
                         </p>
                     </div>
-                    <div class="col-md-5">
-                        <br>
+                    <div class="col-md-5 lower">
                         <span style="font-weight: bolder; font-size: xx-large; color:red !important;">
                         LEVI'S
                     </span>
@@ -71,15 +70,14 @@
                 <div class="row">
                     <div class="col-md-5">
                         <p>
-                            <span style="font-weight: bolder; font-size: xx-large">30%</span>
+                            <span class="m-percent" style="font-weight: bolder; font-size: xx-large">30%</span>
                             <br>
-                            <span style="font-weight: lighter; font-size: large">
+                            <span class="m-span" style="font-weight: lighter; font-size: large">
                         off on all
                     </span>
                         </p>
                     </div>
-                    <div class="col-md-5">
-                        <br>
+                    <div class="col-md-5 lower">
                     <span style="font-weight: bolder; font-size: xx-large; color:red !important;">
                         LEVI'S
                     </span>
@@ -91,7 +89,7 @@
         <div class="col-md-9 ">
             <div class="row">
                 <span style="margin: 10px; font-weight: bold; font-size: x-large">HOT DEALS</span>
-                <div style=" width: 50%; ">
+                <div class="hot-deal-wrapper" style=" width: 50%; ">
                     <div class="hot-deal-card">
                         <div class="hot-deal-image">
                             <img class="" style="width: 100%; max-height: 200px"
@@ -112,7 +110,7 @@
 
                     </div>
                 </div>
-                <div style=" width: 50%; ">
+                <div class="hot-deal-wrapper" style=" width: 50%; ">
                     <div class="hot-deal-card">
                         <div class="hot-deal-image">
                             <img class="" style="width: 100%; max-height: 200px"

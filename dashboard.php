@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A and A Shopping | E-commerce website | Group Assignment</title>
-    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/style1.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                     </ul>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-12-mb">
                         <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
                             <li><a data-toggle="tab" href="#dashboard">Dashboard</a></li>
                             <li><a data-toggle="tab" href="#myprofile">My Profile</a></li>
