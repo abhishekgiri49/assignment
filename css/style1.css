@@ -214,6 +214,14 @@
         font-size: 20px;
     }
 
+    .table-content{
+        overflow-x: auto;
+    }
+
+    .register-page .col-md-8{
+        width: 60%;
+    }
+
 
 }
 
@@ -393,6 +401,25 @@
         padding: 10px 20px;
     }
 
+    .product-item-options{
+        padding-left: 0;
+    }
+
+    .tb-width-100{
+        width: 100%;
+    }
+
+    .register-page .col-md-8 {
+        width: 50%;
+    }
+
+    .login-container{
+        background: #fff;
+    }
+
+
+
+
 }
 
 
@@ -403,7 +430,7 @@
     }
 
     .entry-title {
-        font-size: 30px;
+        font-size: 26px;
         padding: 20px;
     }
 
@@ -514,4 +541,33 @@
         margin: 0;
     }
 
+    .mb-width-100{
+        width: 100%;
+    }
+
+    .col-50{
+        -ms-flex: 100%;
+        flex: 100%;
+    }
+
+    .return-shipping{
+        padding: 20px!important;
+    }
+
+    table.shop_table td.product-thumbnail{
+        padding-right: 20px;
+    }
+
+    .register-page .col-md-8, .register-page .col-md-4 {
+        width: 100%;
+    }
+
+    .login-container{
+        width: 80%;
+    }
+
+    .login-container form{
+        width: 100%;
+        max-width: 600px;
+    }
 }

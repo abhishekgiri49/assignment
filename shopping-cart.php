@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A and A Shopping | E-commerce website | Group Assignment</title>
-    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/style1.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
             </div>
             <div class="row">
                 <h1 class="entry-title">Shopping Cart</h1>
-                <div class="col-md-8 itemBlock-base-leftBlock  bg-grey">
+                <div class="col-md-8 itemBlock-base-leftBlock  bg-grey tb-width-100">
                     <!-- <div class="verticalline"> <hr></div> -->
                     <div class="cart-content">
                         <div class="table-content">
@@ -76,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 bg-grey" style="padding: 32px; 0">
+                <div class="col-md-4 bg-grey tb-width-100" style="padding: 32px; 0">
                     <div class="text-container">
                         <a href="" class="cont-shopping">&lt;&lt;&lt; Return To Shopping</a>
                     </div>

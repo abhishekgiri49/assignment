@@ -578,6 +578,10 @@ nav ul li:hover .categoryContainer {
 
 /* *************end of breadcrumb */
 /* **********product detail************** */
+.product-item-image{
+  position: sticky;
+  top: 100px;
+}
 
 .product-item-image img {
   min-width: 100%;
@@ -641,8 +645,8 @@ nav ul li:hover .categoryContainer {
   position: absolute;
 
   box-sizing: border-box;
-  left: -4px;
-  top: -4px;
+  left: -6px;
+  top: 0px;
 }
 .blue {
   background: #7ed6df;
