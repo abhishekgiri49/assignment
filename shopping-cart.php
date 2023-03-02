@@ -38,8 +38,8 @@
                                         <th class="product-remove">&nbsp;</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody id="items">
+                                    <!-- <tr>
                                         <td class="product-thumbnail"><img src="images/product/tshirt.jpg" alt=""></td>
                                         <td class="product-name">T-shirt<dl class="variation">
                                                 <dt class="variation-name">Size:</dt>
@@ -70,9 +70,10 @@
                                         <td>2</td>
                                         <td>62</td>
                                         <td>X</td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
+                            <!-- <div id="items"></div> -->
                         </div>
                     </div>
                 </div>
@@ -103,7 +104,7 @@
     </div>
 
     <?php include('./layouts/footer.php'); ?>
-
+<script src="js/script.js"></script>
 </body>
 
 </html>
