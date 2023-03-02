@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A and A Shopping | E-commerce website | Group Assignment</title>
-    <link href="./css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/style1.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -25,14 +26,14 @@
                     <li>Louis Philippe Sport Tshirt</li>
                 </ul>
             </div>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row p-product-grid">
+                <div class="col-md-4 mb-width-100">
                     <div class="product-item-image">
                         <img src="images/product/tshirt.jpg" alt="">
                     </div>
 
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 mb-width-100">
                     <div class="product-item-options">
                         <h4>Louis Philippe Sport Tshirt</h4>
 
