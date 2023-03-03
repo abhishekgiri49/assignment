@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A and A Shopping | E-commerce website | Group Assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./css/style.css" rel="stylesheet"/>
     <link href="./css/style1.css" rel="stylesheet"/>
 </head>
@@ -40,38 +43,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="items">
-                                    <!-- <tr>
-                                        <td class="product-thumbnail"><img src="images/product/tshirt.jpg" alt=""></td>
-                                        <td class="product-name">T-shirt<dl class="variation">
-                                                <dt class="variation-name">Size:</dt>
-                                                <dd class="variation-name">
-                                                    <p>32</p>
-                                                </dd>
-                                                <dt class="variation-Color">Color:Green</dt>
-                                                <dd class="variation-Color"></dd>
-                                            </dl>
-                                        </td>
-                                        <td>20</td>
-                                        <td>2</td>
-                                        <td>40</td>
-                                        <td>X</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-thumbnail"><img src="images/product/kurtha.jpg" alt=""></td>
-                                        <td class="product-name">kurtha<dl class="variation">
-                                                <dt class="variation-name">Size:</dt>
-                                                <dd class="variation-name">
-                                                    <p>S</p>
-                                                </dd>
-                                                <dt class="variation-Color">Color:Yellow</dt>
-                                                <dd class="variation-Color"></dd>
-                                            </dl>
-                                        </td>
-                                        <td>31</td>
-                                        <td>2</td>
-                                        <td>62</td>
-                                        <td>X</td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                             <!-- <div id="items"></div> -->
@@ -85,14 +56,14 @@
                     <div class="total-container">
                         <div class="price-container">PRICE DETAILS (1 Item)</div>
                         <div class="price-list">
-                            <div class="price-row"><span>Total MRP</span><span class="price-value ">2,199</span></div>
+                            <div class="price-row"><span>Total MRP</span><span class="price-value" id="sumtotal"></span></div>
                             <div class="price-row"><span>Discount on MRP</span><span
-                                    class="price-value price-discount"><span>-</span>1,210</span></div>
+                                    class="price-value price-discount" id="discount"></span></div>
                             <div class="price-row"><span>Coupon Discount</span><span class="price-value text-red">Apply
                                     Coupon</span></div>
                                     <div class="price-row"><span><input type="text" class="form-coupon"></span><span class="price-value text-red">Apply
                                     </span></div>
-                            <div class="price-total"><span>Total MRP</span><span class="price-value ">2,199</span></div>
+                            <div class="price-total"><span>Total MRP</span><span class="price-value " id="total"></span></div>
                         </div>
                     </div>
                     <div>

@@ -1094,3 +1094,46 @@ table.shop_table img {
   color: #fff;
 }
 /* ***************end dashboard profile************ */
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+#lblCartCount {
+  font-size: 13px;
+  background: #ff0000;
+  color: #fff;
+  padding: 1px 5px;
+  vertical-align: top;
+  margin-left: -10px;
+  position: relative;
+  top: -30px;
+  left: 27px;
+}
+
+.minus, .plus{
+  width: 20px;
+  height: 34px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding: 4px 5px 8px 5px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  top: -9px;
+}
+.qtyinput{
+  height:34px;
+      width: 100px !important;
+      text-align: center;
+      font-size: 26px;
+			border:1px solid #ddd;
+			border-radius:4px;
+      display: inline-block;
+      vertical-align: middle;
+}
