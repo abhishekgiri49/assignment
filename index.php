@@ -13,7 +13,10 @@
 <body>
 
 <?php include('./layouts/header.php'); ?>
+
+
 <div class="container index-body">
+
     <section class="banner">
     </section>
     <div class="row bg-gray">
@@ -104,7 +107,7 @@
                                 <span class="text-warning strike font-l">CA $783</span>
                             </div>
                             <div class="al-center">
-                                <span class="buy-now">ADD TO CART</span>
+                                <span class="buy-now" onclick="addToCart(1)">ADD TO CART</span>
                             </div>
                         </div>
 
@@ -125,7 +128,7 @@
                                 <span class="text-warning strike font-l">CA $783</span>
                             </div>
                             <div class="al-center">
-                                <span class="buy-now">ADD TO CART</span>
+                                <span class="buy-now" onclick="addToCart(2)">ADD TO CART</span>
                             </div>
                         </div>
 
@@ -248,6 +251,7 @@
 
 <?php include('./layouts/footer.php'); ?>
 
+<script src="js/script.js"></script>
 </body>
 
 </html>

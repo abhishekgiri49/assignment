@@ -99,8 +99,8 @@
                             <li><span><img src="images/profile.svg"><a href="">Profile</a><span>
                             </li>
                             <li><span><img src="images/heart.png"><a href="">Wishlist</a><span></li>
-                            <li><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
-                            <a href="">Cart</a><span></li>
+                            <li><a href="/assignment/shopping-cart.php"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
+                            Cart<span></a></li>
                         </ul>
                     </div>
 

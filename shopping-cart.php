@@ -56,7 +56,8 @@
                     <div class="total-container">
                         <div class="price-container">PRICE DETAILS (1 Item)</div>
                         <div class="price-list">
-                            <div class="price-row"><span>Total MRP</span><span class="price-value" id="sumtotal"></span></div>
+                            <div class="price-row"><span>Total MRP</span><span class="price-value" id="subtotal"></span></div>
+                            <div class="price-row"><span>Tax (HST %13)</span><span class="price-value" id="tax"></span></div>
                             <div class="price-row"><span>Discount on MRP</span><span
                                     class="price-value price-discount" id="discount"></span></div>
                             <div class="price-row"><span>Coupon Discount</span><span class="price-value text-red">Apply

@@ -1,11 +1,8 @@
 // reusable function
-function appendNode(parent, element) {
-    parent.appendChild(element);
-};
 
-function getDiv(container) {
+var $ = (container) => {
     return document.getElementById(container);
-};
+}
 
 function createNode(node) {
     let element = document.createElement(node);
@@ -15,47 +12,63 @@ function createNode(node) {
 
 let items_array = [
     { "name": "tshirt", "id": 1, price: 10.01, qty: 1,image:"tshirt.jpg" },
-    { "name": "pant", "id": 2, price: 14, qty: 3,image:"pant.jpg" },
+    { "name": "pant", "id": 2, price: 14, qty: 1,image:"pant.jpg" },
     { "name": "kurtha", "id": 3, price: 22, qty: 1 ,image:"kurtha.jpg"},
     { "name": "hoodie", "id": 4, price: 42, qty: 1,image:"hoodie.jpg" }
 ];
+var cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
 
-let cart = [];
-
-function displayItems(items, container) {
-    let sumtotal = 0;
-    let total = 0;
-    let discount = 10;
-    let cartcount = getDiv("lblCartCount");
-    if(items_array.length>0){
-        cartcount.innerHTML=items_array.length;
+function addToCart(id) {
+    for (var i = 0; i < items_array.length; i++) {
+        if (id === items_array[i].id) {
+             item = items_array[i]
+        }
+      }
+    cart.push(item);
+    localStorage.setItem("cart", []);
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+function displayCartCount(){
+    let cartcount = $("lblCartCount");
+    if(cart.length>0){
+        cartcount.innerHTML=cart.length;
     }else{
         cartcount.innerHTML=0;
     }
-    console.log(items);
-    let table = getDiv(container);
+}
+displayCartCount()
+let tax = 0.13;
+let discount = 10; //predefined
+    
+function displayItems(items, container) {
+    let subtotal = 0;
+    let total = 0;
+    
+    displayCartCount()
+    let table = $(container);
     table.innerHTML = "";
-    let sumtotalText = getDiv("sumtotal");
-    let totalText = getDiv("total");
-    let discountText = getDiv("discount");
-
+    let subtotalText = $("subtotal");
+    let totalText = $("total");
+    let discountText = $("discount");
+    let taxText = $("tax");
     for (let i = 0; i < items.length; i++) {
         let item = items[i];
-            let row = document.createElement("tr")
+            let row = createNode("tr")
             // Create cells
-            let imageRow = document.createElement("td")
-            let nameRow = document.createElement("td")
-            let price = document.createElement("td")
-            let qty = document.createElement("td")
-            let subTotal = document.createElement("td")
-            let deleteRow = document.createElement("td")
+            let imageRow = createNode("td")
+            let nameRow = createNode("td")
+            let price = createNode("td")
+            let qty = createNode("td")
+            let subTotalRow = createNode("td")
+            let deleteRow = createNode("td")
             // Insert data to cells
             //image insert
             imageRow.className="product-thumbnail"
-            const img = document.createElement("img");
+            const img = createNode("img");
             img.src = 'images/product/'+item.image;
             imageRow.append(img)
-//description
+            
+            //description
             nameRow.innerText = item.name
             price.innerText = item.price
 
@@ -68,11 +81,11 @@ function displayItems(items, container) {
 
 
             let x = parseFloat(item.qty*item.price).toFixed(2)
-            total += parseFloat(x) ; //sum of price
-            subTotal.innerText = x
+            subtotal += parseFloat(x) ; //sum of price
+            subTotalRow.innerText = x
 
             //delete row
-            var t = document.createElement("i")
+            var t = createNode("i")
             t.className="fa fa-trash"
             deleteRow.append(t)
             deleteRow.onclick = function () {
@@ -83,39 +96,54 @@ function displayItems(items, container) {
             row.appendChild(nameRow);
             row.appendChild(price);
             row.appendChild(qty);
-            row.appendChild(subTotal);
+            row.appendChild(subTotalRow);
             row.appendChild(deleteRow);
             // Append row to table body
             table.appendChild(row)
     }
-    sumtotal = total
-    total = total-discount
-    sumtotalText.innerText=parseFloat(sumtotal).toFixed(2)
+
+    //cart calcualtion
+    taxamount = subtotal*tax
+    total = subtotal + taxamount-discount
+    subtotalText.innerText=parseFloat(subtotal).toFixed(2)
     totalText.innerText=parseFloat(total).toFixed(2)
+    taxText.innerText=parseFloat(taxamount).toFixed(2)
     discountText.innerText=parseFloat(discount).toFixed(2)
+
 }
-window.onload = displayItems(items_array, "items");
+window.onload = displayItems(cart, "items");
 
 function removeItem(index) {
     
-    items_array.splice(index, 1);
-    displayItems(items_array, "items");
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayItems(cart, "items");
 }
 function decreaseQty(index) {
-    
-    for (var i = 0; i < items_array.length; i++) {
+    for (var i = 0; i < cart.length; i++) {
         if (i === index) {
-            items_array[i].qty -= 1; 
+            if(cart[i].qty==1){
+                if(confirm("this action delete product from Cart. are you sure?")){
+                    cart.splice(index, 1);
+                }else{
+                    cart[i].qty = 1;
+                }
+            }else{
+                cart[i].qty -= 1; 
+            }
+            
         }
       }
-    displayItems(items_array, "items");
+      localStorage.setItem("cart", JSON.stringify(cart));
+    displayItems(cart, "items");
 }
 function increaseQty(index) {
     
-    for (var i = 0; i < items_array.length; i++) {
+    for (var i = 0; i < cart.length; i++) {
         if (i === index) {
-            items_array[i].qty += 1; 
+            cart[i].qty += 1; 
         }
-      }
-    displayItems(items_array, "items");
+      }localStorage.setItem("cart", JSON.stringify(cart));
+      
+    displayItems(cart, "items");
 }
