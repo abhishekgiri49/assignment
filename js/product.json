@@ -1,0 +1,6 @@
+ [
+    { "name": "tshirt", "id": 1, price: 10.01, qty: 1,image:"tshirt.jpg" },
+    { "name": "pant", "id": 2, price: 14, qty: 1,image:"pant.jpg" },
+    { "name": "kurtha", "id": 3, price: 22, qty: 1 ,image:"kurtha.jpg"},
+    { "name": "hoodie", "id": 4, price: 42, qty: 1,image:"hoodie.jpg" }
+]
