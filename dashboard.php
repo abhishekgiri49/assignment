@@ -104,7 +104,7 @@
     </div>
 
     <?php include('./layouts/footer.php'); ?>
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>

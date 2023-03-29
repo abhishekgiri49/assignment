@@ -1,6 +1,136 @@
- [
-    { "name": "tshirt", "id": 1, price: 10.01, qty: 1,image:"tshirt.jpg" },
-    { "name": "pant", "id": 2, price: 14, qty: 1,image:"pant.jpg" },
-    { "name": "kurtha", "id": 3, price: 22, qty: 1 ,image:"kurtha.jpg"},
-    { "name": "hoodie", "id": 4, price: 42, qty: 1,image:"hoodie.jpg" }
-]
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Women's Trench Coat",
+        "slug": "womens-trench-coat",
+        "category": "Coats & Jackets",
+        "price": 89.99,
+        "description": "Stay chic in the rain with our classic trench coat, designed for women.",
+        "image_url": "./images/img1.jpg",
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["Beige", "Black", "Navy"]
+      },
+      {
+        "id": 2,
+        "name": "Men's Polo Shirt",
+        "slug": "mens-polo-shirt",
+        "category": "Shirts",
+        "price": 29.99,
+        "description": "Our classic polo shirt for men is perfect for casual and dressy occasions.",
+        "image_url": "./images/img2.jpg",
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["White", "Black", "Red", "Navy"]
+      },
+      {
+        "id": 3,
+        "name": "Women's Skinny Jeans",
+        "slug": "womens-skinny-jeans",
+        "category": "Jeans",
+        "price": 49.99,
+        "description": "Our skinny jeans for women hug your curves and flatter your figure.",
+        "image_url": "./images/img2.jpg",
+        "sizes": ["24", "26", "28", "30", "32"],
+        "colors": ["Blue", "Black", "Gray"]
+      },
+      {
+        "id": 4,
+        "name": "Men's Dress Pants",
+        "slug": "mens-dress-pants",
+        "category": "Pants",
+        "price": 79.99,
+        "description": "Our dress pants for men are perfect for the office or formal events.",
+        "image_url": "./images/img3.jpg",
+        "sizes": ["30x30", "32x32", "34x34", "36x36"],
+        "colors": ["Black", "Navy", "Gray"]
+      },
+      {
+        "id": 5,
+        "name": "Women's Maxi Dress",
+        "slug": "womens-maxi-dress",
+        "category": "Dresses",
+        "price": 69.99,
+        "description": "Our maxi dress for women is perfect for summer weddings and events.",
+        "image_url": "./images/img3.jpg",
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["Blue", "Pink", "Purple"]
+      },
+      {
+        "id": 6,
+        "name": "Men's Leather Jacket",
+        "slug": "mens-leather-jacket",
+        "category": "Coats & Jackets",
+        "price": 199.99,
+        "description": "Our leather jacket for men is the perfect addition to your wardrobe.",
+        "image_url": "./images/img4.jpg",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "Brown"]
+      },
+      {
+        "id": 10,
+        "name": "Women's Trench Coat",
+        "slug": "10-womens-trench-coat",
+        "category": "Coats & Jackets",
+        "price": 89.99,
+        "description": "Stay chic in the rain with our classic trench coat, designed for women.",
+        "image_url": "./images/img4.jpg",
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["Beige", "Black", "Navy"]
+      },
+      {
+        "id": 11,
+        "name": "Men's Polo Shirt",
+        "slug": "11-mens-polo-shirt",
+        "category": "Shirts",
+        "price": 29.99,
+        "description": "Our classic polo shirt for men is perfect for casual and dressy occasions.",
+        "image_url": "./images/img5.jpg",
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["White", "Black", "Red", "Navy"]
+      },
+      {
+        "id": 12,
+        "name": "Women's Skinny Jeans",
+        "slug": "12-womens-skinny-jeans",
+        "category": "Jeans",
+        "price": 49.99,
+        "description": "Our skinny jeans for women hug your curves and flatter your figure.",
+        "image_url": "./images/img5.jpg",
+        "sizes": ["24", "26", "28", "30", "32"],
+        "colors": ["Blue", "Black", "Gray"]
+      },
+      {
+        "id": 13,
+        "name": "Men's Dress Pants",
+        "slug": "13-mens-dress-pants",
+        "category": "Pants",
+        "price": 79.99,
+        "description": "Our dress pants for men are perfect for the office or formal events.",
+        "image_url": "./images/img1.jpg",
+        "sizes": ["30x30", "32x32", "34x34", "36x36"],
+        "colors": ["Black", "Navy", "Gray"]
+      },
+      {
+        "id": 14,
+        "name": "Women's Maxi Dress",
+        "slug": "14-womens-maxi-dress",
+        "category": "Dresses",
+        "price": 69.99,
+        "description": "Our maxi dress for women is perfect for summer weddings and events.",
+        "image_url": "./images/img2.jpg",
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["Blue", "Pink", "Purple"]
+      },
+      {
+        "id": 15,
+        "name": "Men's Leather Jacket",
+        "slug": "15-mens-leather-jacket",
+        "category": "Coats & Jackets",
+        "price": 199.99,
+        "description": "Our leather jacket for men is the perfect addition to your wardrobe.",
+        "image_url": "./images/img2.jpg",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "Brown"]
+      }
+    ]
+}

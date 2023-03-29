@@ -86,3 +86,10 @@
     </div>
     <div class="copywright-tag">&copyCopyright A and A. All rights reserved</div>
 </footer>
+
+
+</script>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<!-- <script src="./node_modules/file-system/file-system.js"></script> -->
+<script src="./js/product-handler.js"></script>
+

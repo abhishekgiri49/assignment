@@ -571,3 +571,71 @@
         max-width: 600px;
     }
 }
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid black; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .product_image:hover{
+    animation-name: pulse;
+    /*animation-fill-mode: both;*/
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+    15% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+    30% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05)
+    }
+    to {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+    15% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+    30% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05)
+    }
+    to {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+    }
+  }

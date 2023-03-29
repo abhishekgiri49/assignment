@@ -19,33 +19,10 @@
 
     <section class="banner">
     </section>
-    <div class="row bg-gray">
+    <div class="row bg-gray" id="new_arrival">
 <!--        <span  style="margin: 10px; font-weight: bold; font-size: x-large; color:#03a685">NEW ARRIVAL</span>-->
         <h3 class="entry-title">New Arrival</h3>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
-        <div class="col-md-3">
-            <?php include("layouts/product/product.php") ?>
-        </div>
+        
     </div>
     <div class="row offer-grid" style="margin: 10px;">
         <div class="col-md-3 " style="max-height: 200px">
@@ -90,51 +67,9 @@
         </div>
         </div>
         <div class="col-md-9 ">
-            <div class="row">
+            <div class="row" id="hot_deal">
                 <span style="margin: 10px; font-weight: bold; font-size: x-large">HOT DEALS</span>
-                <div class="hot-deal-wrapper" style=" width: 50%; ">
-                    <div class="hot-deal-card">
-                        <div class="hot-deal-image">
-                            <img class="" style="width: 100%; max-height: 200px"
-                                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="">
-                        </div>
-                        <div class="hot-deal-detail">
-                            <span class="font-800 font-2xl">Mens Winter Boot</span><br>
-                            <small class="font-500 font-sm">Product Category</small>
-                            <br>
-                            <div class="price">
-                                <span class="product-price font-xl">CA $870</span>
-                                <span class="text-warning strike font-l">CA $783</span>
-                            </div>
-                            <div class="al-center">
-                                <span class="buy-now" onclick="addToCart(1)">ADD TO CART</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="hot-deal-wrapper" style=" width: 50%; ">
-                    <div class="hot-deal-card">
-                        <div class="hot-deal-image">
-                            <img class="" style="width: 100%; max-height: 200px"
-                                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="">
-                        </div>
-                        <div class="hot-deal-detail">
-                            <span class="font-800 font-2xl">Mens Winter Boot</span><br>
-                            <small class="font-500 font-sm">Product Category</small>
-                            <br>
-                            <div class="price">
-                                <span class="product-price font-xl">CA $870</span>
-                                <span class="text-warning strike font-l">CA $783</span>
-                            </div>
-                            <div class="al-center">
-                                <span class="buy-now" onclick="addToCart(2)">ADD TO CART</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+               
             </div>
         </div>
     </div>
@@ -148,31 +83,8 @@
                             <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
                             <label for="tab-1" class="tab-label">Mens</label>
                             <div class="tab-content">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
+                                <div class="row" id="featured_mens">
+                                    
                                 </div>
                             </div>
                         </div>
@@ -180,31 +92,8 @@
                             <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
                             <label for="tab-2" class="tab-label">Womens</label>
                             <div class="tab-content">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
+                                <div class="row" id="featured_womens">
+                                   
                                 </div>
                             </div>
                         </div>
@@ -212,7 +101,7 @@
                             <input type="radio" name="css-tabs" id="tab-3" class="tab-switch">
                             <label for="tab-3" class="tab-label">Kids</label>
                             <div class="tab-content">
-                                <div class="row">
+                                <div class="row" id="featured_kids">
                                     <div class="col-md-3">
                                         <?php include("layouts/product/product.php") ?>
                                     </div>
@@ -250,9 +139,6 @@
 </div>
 
 <?php include('./layouts/footer.php'); ?>
-
-<script src="js/script.js"></script>
-<script src="js/script1.js"></script>
 </body>
 
 </html>
