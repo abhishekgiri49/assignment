@@ -35,7 +35,7 @@
             
                 <div class="col-md-4 mb-width-100">
                     <div class="product-item-image">
-                        <img src="" alt="" id="product_image">
+                        <img src="" alt="" id="product_image" class="product_image">
                     </div>
 
                 </div>
