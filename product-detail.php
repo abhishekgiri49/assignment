@@ -26,39 +26,47 @@
                     <li>Louis Philippe Sport Tshirt</li>
                 </ul>
             </div>
-            <div class="row p-product-grid">
+            <div class="row">
+            <div class="col-md-12 " id="product-loader"><div style="margin-left:auto;
+        margin-right:auto;"class="loader"></div>
+        </div>
+            </div>
+            <div class="row p-product-grid" id="product_detail">
+            
                 <div class="col-md-4 mb-width-100">
                     <div class="product-item-image">
-                        <img src="images/product/tshirt.jpg" alt="">
+                        <img src="" alt="" id="product_image">
                     </div>
 
                 </div>
                 <div class="col-md-8 mb-width-100">
-                    <div class="product-item-options">
-                        <h4>Louis Philippe Sport Tshirt</h4>
+                
 
-                        <p>Men Burgundy Solid Polo Collar T-shirt</p>
+                    <div class="product-item-options">
+                        <h4 id="product_title"></h4>
+
+                        <p id="product_category"></p>
                         <div class="product-item-options__rating">
                             <span>4.5 <img src="images/star.png" alt="" height="20"></span>
                         </div>
-                        <strong> ₹779 | MRP ₹1299 <span style="color:orange;">(40% OFF)</span></strong>
+                        <strong> $ <span id="product_price"></span> | $ <span class="strike" id="product_discounted_price"></span><span style="color:orange;">(40% OFF)</span></strong>
                         <p style="color:#03a685;">inclusive of all taxes</p>
                         <div class="desc-group">
                             <strong> More Colors</strong>
-                            <div class="shoes-colors">
-                                <span class="blue active"></span>
+                            <div class="shoes-colors" id="colors">
+                                <!-- <span class="blue active"></span>
                                 <span class="green"></span>
                                 <span class="yellow"></span>
-                                <span class="rose"></span>
+                                <span class="rose"></span> -->
                             </div>
                         </div>
                         <div class="desc-group">
                             <strong> Select Size</strong>
-                            <div class="shoes-size">
-                                <span class="size-box active">S</span>
+                            <div class="shoes-size" id="sizes">
+                                <!-- <span class="size-box active">S</span>
                                 <span class="size-box">M</span>
                                 <span class="size-box">L</span>
-                                <span class="size-box">XL</span>
+                                <span class="size-box">XL</span> -->
                             </div>
                         </div>
                         <div class="desc-group">
@@ -261,9 +269,9 @@
         </section>
 
     </div>
-
-    <?php include('./layouts/footer.php'); ?>
+    
 <script src="js/script.js"></script>
+<?php include('./layouts/footer.php'); ?>
 </body>
 
 </html>

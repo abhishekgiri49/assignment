@@ -660,6 +660,22 @@ nav ul li:hover .categoryContainer {
 .rose {
   background: #ff7979;
 }
+.gray {
+  background:gray;
+}
+.red {
+  background:red;
+}
+.pink {
+  background:pink;
+}
+.purple {
+  background:purple;
+}
+.brown {
+  background:brown;
+}
+
 .sign {
   display: flex;
   flex-direction: row;

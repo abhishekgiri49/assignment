@@ -102,30 +102,7 @@
                             <label for="tab-3" class="tab-label">Kids</label>
                             <div class="tab-content">
                                 <div class="row" id="featured_kids">
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <?php include("layouts/product/product.php") ?>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

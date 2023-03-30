@@ -1,6 +1,6 @@
 function showAndHideLoader(selector, type = "show"){
   if(type == "show"){
-    let html = `<div class="col-md-12"><div style="margin-left:auto;
+    let html = `<div class="col-md-12 product-loader"><div style="margin-left:auto;
     margin-right:auto;"class="loader"></div></div>`
     $(selector).append(html);
   }else{
@@ -24,7 +24,7 @@ function productHtml(selector, product) {
               <a href="#" class="text-muted">${product.category}</a>
           </small>
           <span class="product-title">
-              <a href="#" class="text-body">${product.name}</a>
+              <a href="product-detail.php?slug=${product.slug}" class="text-body">${product.name}</a>
           </span>
           <div class="price">
               <span class="product-price">CA $ ${parsePrice(product.price, 'discounted')}</span>
@@ -47,7 +47,10 @@ function productHotDealHtml(selector, product) {
                  src="${product.image_url}" alt="">
         </div>
         <div class="hot-deal-detail">
-            <span class="font-800 font-2xl">${product.name}</span><br>
+        <a href="product-detail.php?slug=${product.slug}">
+        <span class="font-800 font-2xl">${product.name}</span>
+        </a>
+           <br>
             <small class="font-500 font-sm">${product.category}</small>
             <br>
             <div class="price">
@@ -65,10 +68,13 @@ function productHotDealHtml(selector, product) {
 }
 
 function parsePrice(price, type="discounted"){
-  price = parseFloat(price)
-  if(type != "discounted")
-    price +=50;
-  return price.toFixed(2)
+  
+  if(type=="discounted"){
+    return price.toFixed(2)
+  }else{
+    price = price + 50;
+    return price.toFixed(2)
+  }
 }
 
 async function getProducts(noOfProductToDisplay, order = "RAND") {
@@ -84,6 +90,18 @@ async function getProducts(noOfProductToDisplay, order = "RAND") {
     }
   });
   return temp;
+}
+
+async function getOnlyProduct(slug) {
+  let product = {};
+  await $.getJSON("./js/product.json", function (data) {
+    let products = data.products;
+    for (var i = 0; i < products.length; i++) {
+     if(products[i].slug == slug)
+     product = products[i]
+    }
+  });
+  return product;
 }
 
 function appendProduct(selector, noOfProductToDisplay, order = "RAND") {
@@ -112,10 +130,60 @@ function appendHotDealProduct(selector, noOfProductToDisplay, order = "RAND") {
   });
 }
 
+function displayColor(colors){
+  if(colors.length>0){
+    colors.forEach( (k,v)=>{
+      let active= "active"
+      if(v != 0)
+        active = null
+      $("#colors").append(`<span class="${k.toLowerCase()} ${active}"></span>`) 
+    })
+  }
+}
+
+function displaySize(sizes){
+  if(sizes.length>0){
+    sizes.forEach( (k,v)=>{
+      let active= "active"
+      if(v != 0)
+        active = null
+      $("#sizes").append(`<span class="size-box ${active}">${k.toUpperCase()}</span>`) 
+    })
+  }
+}
+
+function getProductForDetailPage(slug){
+  getOnlyProduct(slug).then((data) => {
+    setTimeout(() => {
+      $("#product-loader").hide()
+      $("#product_detail").show()
+      $("#product_title").text(data.name)
+      $("#product_category").text(data.category)
+      $("#product_price").text(parsePrice(data.price))
+      $("#product_discounted_price").text(parsePrice(data.price, 'not-discounted'))
+      $("#product_image").attr('src', data.image_url)
+      displayColor(data.colors)
+      displaySize(data.sizes)
+      // 
+    }, 1000);
+  });
+}
+
 $(document).ready(() => {
+  let slug = null
+  let urlParam = window.location.search
+  if(urlParam != undefined && urlParam != null && urlParam != ''){
+    slug = urlParam.split("=")[1]
+  }
+  if(slug == null){
     appendProduct("#new_arrival", 8);
     appendHotDealProduct('#hot_deal', 2)
     appendProduct("#featured_mens", 8);
     appendProduct("#featured_womens", 8);
     appendProduct("#featured_kids", 8);
+  }else{
+    $("#product_detail").hide()
+    getProductForDetailPage(slug)
+  }
 });
+

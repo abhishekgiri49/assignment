@@ -9,7 +9,7 @@
         "description": "Stay chic in the rain with our classic trench coat, designed for women.",
         "image_url": "./images/img1.jpg",
         "sizes": ["XS", "S", "M", "L", "XL"],
-        "colors": ["Beige", "Black", "Navy"]
+        "colors": ["Blue", "Green", "Yellow"]
       },
       {
         "id": 2,
@@ -20,7 +20,7 @@
         "description": "Our classic polo shirt for men is perfect for casual and dressy occasions.",
         "image_url": "./images/img2.jpg",
         "sizes": ["S", "M", "L", "XL", "XXL"],
-        "colors": ["White", "Black", "Red", "Navy"]
+        "colors": ["Rose", "Green", "Red", "Yellow"]
       },
       {
         "id": 3,
@@ -31,7 +31,7 @@
         "description": "Our skinny jeans for women hug your curves and flatter your figure.",
         "image_url": "./images/img2.jpg",
         "sizes": ["24", "26", "28", "30", "32"],
-        "colors": ["Blue", "Black", "Gray"]
+        "colors": ["Blue", "Green", "Gray"]
       },
       {
         "id": 4,
@@ -42,7 +42,7 @@
         "description": "Our dress pants for men are perfect for the office or formal events.",
         "image_url": "./images/img3.jpg",
         "sizes": ["30x30", "32x32", "34x34", "36x36"],
-        "colors": ["Black", "Navy", "Gray"]
+        "colors": ["Green", "Yellow", "Gray"]
       },
       {
         "id": 5,
@@ -64,7 +64,7 @@
         "description": "Our leather jacket for men is the perfect addition to your wardrobe.",
         "image_url": "./images/img4.jpg",
         "sizes": ["S", "M", "L", "XL"],
-        "colors": ["Black", "Brown"]
+        "colors": ["Green", "Brown"]
       },
       {
         "id": 10,
@@ -75,7 +75,7 @@
         "description": "Stay chic in the rain with our classic trench coat, designed for women.",
         "image_url": "./images/img4.jpg",
         "sizes": ["XS", "S", "M", "L", "XL"],
-        "colors": ["Beige", "Black", "Navy"]
+        "colors": ["Blue", "Green", "Yellow"]
       },
       {
         "id": 11,
@@ -86,7 +86,7 @@
         "description": "Our classic polo shirt for men is perfect for casual and dressy occasions.",
         "image_url": "./images/img5.jpg",
         "sizes": ["S", "M", "L", "XL", "XXL"],
-        "colors": ["White", "Black", "Red", "Navy"]
+        "colors": ["rose", "Green", "Red", "Yellow"]
       },
       {
         "id": 12,
@@ -97,7 +97,7 @@
         "description": "Our skinny jeans for women hug your curves and flatter your figure.",
         "image_url": "./images/img5.jpg",
         "sizes": ["24", "26", "28", "30", "32"],
-        "colors": ["Blue", "Black", "Gray"]
+        "colors": ["Blue", "Green", "Gray"]
       },
       {
         "id": 13,
@@ -108,7 +108,7 @@
         "description": "Our dress pants for men are perfect for the office or formal events.",
         "image_url": "./images/img1.jpg",
         "sizes": ["30x30", "32x32", "34x34", "36x36"],
-        "colors": ["Black", "Navy", "Gray"]
+        "colors": ["Green", "Yellow", "Gray"]
       },
       {
         "id": 14,
@@ -130,7 +130,7 @@
         "description": "Our leather jacket for men is the perfect addition to your wardrobe.",
         "image_url": "./images/img2.jpg",
         "sizes": ["S", "M", "L", "XL"],
-        "colors": ["Black", "Brown"]
+        "colors": ["Green", "Brown"]
       }
     ]
 }
