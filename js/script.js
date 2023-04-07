@@ -1,6 +1,18 @@
 // reusable function
+var items_array = [];
+function getProductList() {
 
-var $ = (container) => {
+    $.ajax({
+      url: 'js/product.json',
+      async: false,
+      dataType: 'json',
+      success: function (json) {
+        items_array = json;
+      }
+    });
+}
+getProductList()
+var getDiv = (container) => {
     return document.getElementById(container);
 }
 
@@ -13,9 +25,10 @@ function createNode(node) {
 var cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
 
 function addToCart(id) {
-    for (var i = 0; i < items_array.length; i++) {
-        if (id === items_array[i].id) {
-             item = items_array[i]
+    for (var i = 0; i < items_array.products.length; i++) {
+        if (id == items_array.products[i].id) {
+             item = items_array.products[i]
+             item["qty"] = 1;
         }
       }
     cart.push(item);
@@ -23,7 +36,7 @@ function addToCart(id) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 function displayCartCount(){
-    let cartcount = $("lblCartCount");
+    let cartcount = getDiv("lblCartCount");
     if(cart.length>0){
         cartcount.innerHTML=cart.length;
     }else{
@@ -39,12 +52,12 @@ function displayItems(items, container) {
     let total = 0;
     
     displayCartCount()
-    let table = $(container);
+    let table = getDiv(container);
     table.innerHTML = "";
-    let subtotalText = $("subtotal");
-    let totalText = $("total");
-    let discountText = $("discount");
-    let taxText = $("tax");
+    let subtotalText = getDiv("subtotal");
+    let totalText = getDiv("total");
+    let discountText = getDiv("discount");
+    let taxText = getDiv("tax");
     for (let i = 0; i < items.length; i++) {
         let item = items[i];
             let row = createNode("tr")

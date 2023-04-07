@@ -31,7 +31,7 @@ function productHtml(selector, product) {
               <span class="text-warning strike">CA $ ${parsePrice(product.price)}</span>
           </div>
           <div class="al-center">
-              <span class="buy-now">ADD TO CART</span>
+              <span class="buy-now"  onclick="addToCart(${product.id})">ADD TO CART</span>
           </div>
       </div>
   </div>
@@ -58,7 +58,7 @@ function productHotDealHtml(selector, product) {
                 <span class="text-warning strike font-l">CA $ ${parsePrice(product.price)}</span>
             </div>
             <div class="al-center">
-                <span class="buy-now" onclick="addToCart(2)">ADD TO CART</span>
+                <span class="buy-now" onclick="addToCart(${product.id})">ADD TO CART</span>
             </div>
         </div>
 

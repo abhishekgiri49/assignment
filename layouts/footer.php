@@ -89,7 +89,9 @@
 
 
 </script>
+
 <script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./js/script.js"></script>
 <!-- <script src="./node_modules/file-system/file-system.js"></script> -->
 <script src="./js/product-handler.js"></script>
 
