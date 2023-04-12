@@ -113,7 +113,7 @@
                                 <li><span><img src="images/profile.svg"><a href="">Profile</a><span>
                                 </li>
                                 <li><span><img src="images/heart.png"><a href="">Wishlist</a><span></li>
-                                    <li><a href="/shopping-cart.html"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
+                                    <li><a href="shopping-cart.html"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
                                 Cart<span></a></li>
                             </ul>
                         </div>
@@ -135,7 +135,7 @@
                         <div class="form-btn">
                             <span>Register</span>
                         </div>
-                        <form class="auth-login-form mt-2" method="POST" action="">
+                        <form class="auth-login-form mt-2" method="POST" action="" id="registerForm">
 
                             <input type="text" class="form-control" name="username" id="login-username" placeholder="Username"
                                 aria-describedby="login-username" tabindex="1" autofocus />
@@ -145,10 +145,10 @@
                             <input type="password" class="form-control form-control-merge" id="login-password"
                                 name="password" tabindex="2" placeholder="Password" aria-describedby="login-password" />
 
-                            <button type="submit" class="login-btn" tabindex="4">Register</button>
+                            <button type="submit" class="login-btn"  >Register</button>
                             <br>
                             <br>
-                            Already have an account?<a class="forgot-password" href=""> Login In</a>
+                            Already have an account?<a class="forgot-password" href="signin.html"> Login In</a>
                         </form>
 
 
@@ -257,6 +257,49 @@
     <script src="./js/script.js"></script>
     <!-- <script src="./node_modules/file-system/file-system.js"></script> -->
     <script src="./js/product-handler.js"></script>
+    <script>
+     
+        $("#registerForm").submit((event)=>{
+            event.preventDefault()
+            $("#login-username").next("span").remove()
+            $("#login-email").next("span").remove()
+            $("#login-password").next("span").remove()
+            let validated = new Set()
+            let userName = $("#login-username").val()
+            let password = $("#login-password").val();
+            let email = $("#login-email").val();
+            if(userName == null || userName == undefined || userName == ""){
+                $("#login-username").css("border", "1px solid red")
+                $("#login-username").after("<span>Username cannot be emtpy</span>")
+                validated.add(false)
+            }
+            if(email == null || email == undefined || email == ""){
+                $("#login-email").css("border", "1px solid red")
+                $("#login-email").after("<span>Email cannot be emtpy</span>")
+                validated.add(false)
+            }
+            if(password == null || password == undefined || password == ""){
+                $("#login-password").css("border", "1px solid red")
+                $("#login-password").after("<span>Password cannot be emtpy</span>")
+                validated.add(false)
+            }
+
+            setTimeout(() => {
+                $("#login-username").css("border", "1px solid silver")
+                $("#login-email").css("border", "1px solid silver")
+                $("#login-password").css("border", "1px solid silver")
+                $("#login-username").next("span").remove()
+                $("#login-email").next("span").remove()
+                $("#login-password").next("span").remove()
+
+            }, 3000);
+            if(validated.has(false))
+                return false
+            else{
+                alert("Form Validated")
+            }
+        })
+    </script>
     
     
 

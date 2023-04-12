@@ -1,7 +1,8 @@
-// reusable function
+let tax = 0.13;
+let discount = 10; //predefined
+
 var items_array = [];
 function getProductList() {
-
     $.ajax({
       url: 'js/product.json',
       async: false,
@@ -24,9 +25,6 @@ function createNode(node) {
 
 var cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
 function addToCart(id) {
-
-    
-
     let exist = false
     let item = {}
     item = items_array.products.find((itm =>itm.id == id))
@@ -64,8 +62,7 @@ function displayCartCount(){
     }
 }
 displayCartCount()
-let tax = 0.13;
-let discount = 10; //predefined
+
     
 function displayItems(items, container) {
     let subtotal = 0;

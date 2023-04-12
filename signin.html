@@ -113,7 +113,7 @@
                                 <li><span><img src="images/profile.svg"><a href="">Profile</a><span>
                                 </li>
                                 <li><span><img src="images/heart.png"><a href="">Wishlist</a><span></li>
-                                    <li><a href="/shopping-cart.html"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
+                                    <li><a href="shopping-cart.html"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
                                 Cart<span></a></li>
                             </ul>
                         </div>
@@ -135,7 +135,7 @@
                         <div class="form-btn">
                             <span>Login</span>
                         </div>
-                        <form class="auth-login-form mt-2" method="POST" action="">
+                        <form class="auth-login-form mt-2" method="POST" action="" id="loginForm">
 
                                 <input type="text" class="form-control" name="email" id="login-email"
                                     placeholder="Email" aria-describedby="login-email" tabindex="1"
@@ -146,12 +146,12 @@
                                         placeholder="Password"
                                         aria-describedby="login-password" />
                                 
-                            <button type="submit" class="login-btn" tabindex="4">Sign in</button>
+                            <button type="submit" class="login-btn" >Sign in</button>
                             <br>
                             <br>
-                            <a class="forgot-password" href="">Forgot password</a>
+                            <a class="forgot-password" href="#">Forgot password</a>
                             <p style="font-size:15px;font-weight: bold;">OR</p>
-                            <a class="forgot-password" href="">Create Account</a>
+                            <a class="forgot-password" href="signup.html">Create Account</a>
                         </form>
                         
                             
@@ -261,7 +261,38 @@
     <!-- <script src="./node_modules/file-system/file-system.js"></script> -->
     <script src="./js/product-handler.js"></script>
     
-    
+    <script>
+        $("#loginForm").submit((event)=>{
+            event.preventDefault()
+            $("#login-email").next("span").remove()
+            $("#login-password").next("span").remove()
+            let password = $("#login-password").val();
+            let email = $("#login-email").val();
+            let validated = new Set()
+            if(email == null || email == undefined || email == ""){
+                $("#login-email").css("border", "1px solid red")
+                $("#login-email").after("<span>Email cannot be emtpy</span>")
+                validated.add(false)
+            }
+            if(password == null || password == undefined || password == ""){
+                $("#login-password").css("border", "1px solid red")
+                $("#login-password").after("<span>Password cannot be emtpy</span>")
+                validated.add(false)
+            }
+
+            setTimeout(() => {
+                $("#login-email").css("border", "1px solid silver")
+                $("#login-password").css("border", "1px solid silver")
+                $("#login-email").next("span").remove()
+                $("#login-password").next("span").remove()
+            }, 3000);
+            if(validated.has(false))
+                return false
+            else{
+                alert("Form Validated")
+            }
+        })
+    </script>
 
 </body>
 
