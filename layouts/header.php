@@ -3,7 +3,7 @@
     <div class="mb-menu">
         <div class="mb-flex">
             <div class="mb-logo">
-                <img src="images/logo.png">
+              <a href="/"> <img src="images/logo.png"></a>
             </div>
             <div class="ham-wrapper">
                 <input type="checkbox" id="menu-toggle" />
@@ -15,7 +15,7 @@
                 >
                 <div class="navbar">
                     <div class="logo">
-                        <img src="images/logo.png">
+                      <a href="/"> <img src="images/logo.png"></a>
                     </div>
                     <nav>
                         <ul>
@@ -99,7 +99,7 @@
                             <li><span><img src="images/profile.svg"><a href="">Profile</a><span>
                             </li>
                             <li><span><img src="images/heart.png"><a href="">Wishlist</a><span></li>
-                            <li><a href="/assignment/shopping-cart.php"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
+                            <li><a href="/shopping-cart.html"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
                             Cart<span></a></li>
                         </ul>
                     </div>

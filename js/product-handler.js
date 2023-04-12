@@ -24,14 +24,14 @@ function productHtml(selector, product) {
               <a href="#" class="text-muted">${product.category}</a>
           </small>
           <span class="product-title">
-              <a href="product-detail.php?slug=${product.slug}" class="text-body">${product.name}</a>
+              <a href="product-detail.html?slug=${product.slug}" class="text-body">${product.name}</a>
           </span>
           <div class="price">
               <span class="product-price">CA $ ${parsePrice(product.price, 'discounted')}</span>
               <span class="text-warning strike">CA $ ${parsePrice(product.price)}</span>
           </div>
           <div class="al-center">
-              <span class="buy-now"  onclick="addToCart(${product.id})">ADD TO CART</span>
+              <span style="cursor:pointer" class="buy-now"  onclick="addToCart(${product.id})">ADD TO CART</span>
           </div>
       </div>
   </div>
@@ -47,7 +47,7 @@ function productHotDealHtml(selector, product) {
                  src="${product.image_url}" alt="">
         </div>
         <div class="hot-deal-detail">
-        <a href="product-detail.php?slug=${product.slug}">
+        <a href="product-detail.html?slug=${product.slug}">
         <span class="font-800 font-2xl">${product.name}</span>
         </a>
            <br>
@@ -58,7 +58,7 @@ function productHotDealHtml(selector, product) {
                 <span class="text-warning strike font-l">CA $ ${parsePrice(product.price)}</span>
             </div>
             <div class="al-center">
-                <span class="buy-now" onclick="addToCart(${product.id})">ADD TO CART</span>
+                <span style="cursor:pointer"  class="buy-now" onclick="addToCart(${product.id})">ADD TO CART</span>
             </div>
         </div>
 
@@ -162,9 +162,9 @@ function getProductForDetailPage(slug){
       $("#product_price").text(parsePrice(data.price))
       $("#product_discounted_price").text(parsePrice(data.price, 'not-discounted'))
       $("#product_image").attr('src', data.image_url)
+      $("#cart_button").append(`<button type="submit" class="btn btn-success" onclick="addToCart(${data.id})"> Add to Cart</button>`)
       displayColor(data.colors)
       displaySize(data.sizes)
-      // 
     }, 1000);
   });
 }

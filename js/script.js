@@ -23,17 +23,37 @@ function createNode(node) {
 
 
 var cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
-
 function addToCart(id) {
-    for (var i = 0; i < items_array.products.length; i++) {
-        if (id == items_array.products[i].id) {
-             item = items_array.products[i]
-             item["qty"] = 1;
-        }
-      }
-    cart.push(item);
+
+    
+
+    let exist = false
+    let item = {}
+    item = items_array.products.find((itm =>itm.id == id))
+    if(cart.length<= 0 ){
+        item["qty"] = 1
+        cart.push(item);
+        exist = true
+    }else{
+        cart.forEach(ele=>{
+            console.log(ele)
+            if(ele.id === id){
+                ele.qty +=1
+                exist = true
+            }
+        })
+    }
+    
+    console.log(item.id, exist)
+    if(!exist){
+        item["qty"] = 1
+        cart.push(item);
+        exist = true
+    }
     localStorage.setItem("cart", []);
     localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.reload()
+    cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
 }
 function displayCartCount(){
     let cartcount = getDiv("lblCartCount");
