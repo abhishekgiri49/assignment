@@ -41,7 +41,7 @@
         "price": 79.99,
         "description": "Our dress pants for men are perfect for the office or formal events.",
         "image_url": "./images/img3.jpg",
-        "sizes": ["30x30", "32x32", "34x34", "36x36"],
+        "sizes": ["30", "32", "34", "36"],
         "colors": ["Green", "Yellow", "Gray"]
       },
       {
@@ -107,7 +107,7 @@
         "price": 79.99,
         "description": "Our dress pants for men are perfect for the office or formal events.",
         "image_url": "./images/img1.jpg",
-        "sizes": ["30x30", "32x32", "34x34", "36x36"],
+        "sizes": ["30", "32", "34", "36"],
         "colors": ["Green", "Yellow", "Gray"]
       },
       {
