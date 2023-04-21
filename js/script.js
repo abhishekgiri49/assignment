@@ -89,7 +89,7 @@ function displayItems(items, container) {
             //image insert
             imageRow.className="product-thumbnail"
             const img = createNode("img");
-            img.src = 'images/product/'+item.image;
+            img.src = item.image_url;
             imageRow.append(img)
             
             //description

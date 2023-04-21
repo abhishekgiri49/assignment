@@ -96,7 +96,7 @@
                     </div>
                     <div class="nav-profile">
                         <ul>
-                            <li><span><img src="images/profile.svg"><a href="">Profile</a><span>
+                        <li><span><img src="images/profile.svg"><a href="signin.html">Profile</a><span>
                             </li>
                             <li><span><img src="images/heart.png"><a href="">Wishlist</a><span></li>
                             <li><a href="shopping-cart.html"><span><img src="images/cart.png"><span class='badge badge-warning' id='lblCartCount'> </span>
