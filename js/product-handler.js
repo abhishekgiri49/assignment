@@ -16,7 +16,7 @@ function productHtml(selector, product) {
       <div class="card-header bg-transparent border-0 p-0">
           <img class="product_image card-img-top" src="${product.image_url}" alt="">
           <div class="details-btn">
-              <a href="#" class="btn btn-dark">View Details <i class="fas fa-long-arrow-alt-right"></i></a>
+              <a href="product-detail.html?slug=${product.slug}" class="btn btn-dark">View Details <i class="fas fa-long-arrow-alt-right"></i></a>
           </div>
       </div>
       <div class="card-body">
